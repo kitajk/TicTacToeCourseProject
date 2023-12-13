@@ -17,7 +17,7 @@ export default function Player({ name, symbol }) {
       setIsEditing(true);
     }
   }
-
+  //   Triggers handleEdi() when enter is clicked
   const handleEnter = (e) => {
     if (e.key === "Enter") {
       handleEdit();
@@ -34,6 +34,7 @@ export default function Player({ name, symbol }) {
             type="text"
             required
             value={inputValue}
+            // Set handleEnter fucntion as value for React's onKeyUp event
             onKeyUp={handleEnter}
             onChange={(e) => setInputValue(e.target.value)}
           />
